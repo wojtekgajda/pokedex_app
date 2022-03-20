@@ -14,7 +14,7 @@ function App() {
     pokemonService.getPokemonList(morePokemons, morePokemons)
       .then((pokemonList) => {
         setPokemonList(pokemonList);
-        Promise.all(pokemonList.map(pokemon =>pokemonService.fetchPokemonDetails(pokemon.url)))
+        Promise.all(pokemonList.map(pokemon => pokemonService.fetchPokemonDetails(pokemon.url)))
           .then(detailedPokemonList => {
             setDetailedPokemonList(detailedPokemonList)
           });

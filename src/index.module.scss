@@ -1,20 +1,19 @@
 @import "variables";
 
-html *
-{
+html * {
   font-family: $poke_font;
 }
 
-body{
+body {
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-ol{
+ol {
   list-style: none
 }
 
-.header_wrapper{
+.header_wrapper {
   position: sticky;
   top: 0;
   z-index: 1;
