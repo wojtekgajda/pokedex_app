@@ -2,7 +2,6 @@ import Pokemon from "./Pokemon";
 
 const PokemonList = ({pokemons}) => {
 
-
   return (
     <>
       <div className='container'>

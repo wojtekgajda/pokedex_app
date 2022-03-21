@@ -22,7 +22,6 @@ function App() {
     setLoading(false);
   }, [morePokemons])
 
-
   const Load20More = (e) => {
     e.preventDefault()
     setMorePokemons(prevState => prevState + 20)
@@ -32,13 +31,16 @@ function App() {
     setMorePokemons(parseInt(num))
   }
 
+  const LoadAll = () =>
+    setMorePokemons(1126)
+
   return (
     <div className="App ">
       <div className='container d-flex flex-column justify-content-center align-items-center'>
         <div className={classes.header_wrapper}>
-          <Header load20More={Load20More} loadMore={LoadMore}/>
+          <Header load20More={Load20More} loadMore={LoadMore} loadAll={LoadAll} pokemons={detailedPokemons}/>
         </div>
-        <div>
+        <div className='w-100'>
           {loading ? <h2>Loading...</h2> : <PokemonList pokemons={detailedPokemons}/>}
         </div>
       </div>

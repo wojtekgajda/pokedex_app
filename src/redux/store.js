@@ -1,5 +1,10 @@
-import {createStore} from "redux";
-import {pokemonReducer} from "./reducer/pokemonReducer";
+import {combineReducers, createStore} from "redux";
+import {pokemonReducer} from "./reducer/PokemonReducer";
 
-export const store = createStore(pokemonReducer)
+
+const reducers = combineReducers({pokemonReducer})
+export const store = createStore(reducers)
+
+
+
 

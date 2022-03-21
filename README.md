@@ -1,3 +1,16 @@
+#From author
+
+This is PokedexApp: 
+
+Stack used in project:
+JS, React, Redux, SCSS, Bootstrap
+
+Enjoy.
+
+ps. State is deliberately managed by both props and redux
+to show that the author has a basic understanding of both conceptions.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

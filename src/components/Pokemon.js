@@ -1,11 +1,12 @@
 import {useDispatch} from "react-redux";
+import classes from "./Pokemon.module.scss";
 
 const Pokemon = (props) => {
   const dispatch = useDispatch();
 
   const AdditionalPokemonInfoHandler = () => {
     dispatch({
-      type: 'update',
+      type: 'POKEMON_UPDATE',
       name: props.name,
       height: props.height,
       weight: props.weight,
@@ -13,16 +14,14 @@ const Pokemon = (props) => {
     })
   }
 
-
-
   return (
-    <div className='card col-3 p-3 bg-opacity-100'>
-
-      <h4 onClick={AdditionalPokemonInfoHandler}>{props.name}</h4>
-      <div>{props.type}</div>
-      <img src={props.sprite} alt=""/>
-
-    </div>
+    <>
+      <div onClick={AdditionalPokemonInfoHandler} className='card col-3 p-3'>
+        <h4>{props.name.toUpperCase()}</h4>
+        <div>{props.type}</div>
+        <img className={classes.card_wrapper} src={props.sprite} alt=""/>
+      </div>
+    </>
   )
 }
 export default Pokemon;
